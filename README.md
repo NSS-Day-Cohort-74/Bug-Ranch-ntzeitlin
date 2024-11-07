@@ -76,11 +76,16 @@ Your journey will take you through the wildness of the American Midwest and acro
 ```
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+   > the constant variable 'drovers' contains an array of drover objects pulled from data.js by the function hireDrovers. The number of drovers is dependent on the cattleToDrive argument passed in when the function hireDrovers is invoked and assigned to the 'drovers' variable. 
+
+
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+   > In this for of loop, 'drovers' is a constant variable containing an array of 'drover' objects. The variable 'drover' contains an individual drover object from the array. After each iteration of the loop, the 'drover' variable updates to the next object in the array.
+
+
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   > https://www.loom.com/share/a7848792af434a94a6bd4e33b2ca8baa?sid=d7512622-0e77-4a34-8302-b8c376c41031
+
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -88,11 +93,15 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > This for loop pushes a number of strings to an array called 'journey'. The for loop is initialized with an integer variable set to 0 which will iterate by 1 after each loop. The loop will run until the integer is no longer less than the number contained in the 'areas' object under the 'forests' key. 
+
+
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > The constant variable 'database' contains an object with two key-value pairs. The first key-value pair in 'database' has a key of 'cattleTypes' and a value that is an array of 4 objects. Each of the 'cattleTypes' objects contains 2 key-value pairs: 'id' with a integer value, and 'breed' with a string value. The second key-value pair in the 'database' object has a key of 'drovers' that contains an array of objects as its value. These objects contain 4 key-value pairs: 'id' which contains an integer, 'first_name' which contains a string, 'last_name' which contains a string, and 'gender' which contains a string. 
+
+
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > '(herdSize)' is a parameter for the hireDrovers function definition. A parameter is passed a value by the argument used when the function is invoked. In this instance, the herdSize parameter is passed an integer argument when the function is invoked in 'main.js'. 
 
 ## When You Are Done
 

@@ -25,9 +25,32 @@ console.log(`
 
 console.log(`You will be accompanying ${drovers.length} drovers as they drive ${cattleToDrive} cattle to Old Red's Ranch for grazing`)
 console.log(`\nThe herd is made of up the following cattle (only their breed is shown):`)
-console.log(`${cattle}\n`)
+let cattleList = ""
+// generate cattleList message and format for display
+// switch row lengths between 5 and 6 breeds
+// practicing algorithmic thinking
+const cattleListLengthA = 5
+const cattleListLengthB = 6
+let selectedListLength = cattleListLengthA
+let counter = 0
 
-console.log("Here is the team of drovers you will be joining")
+
+for (const cow of cattle) {
+    cattleList += `${cow.breed},`
+    counter++
+    if (counter === selectedListLength) {
+        cattleList += `\n`
+        counter = 0
+        if (selectedListLength === cattleListLengthA) {
+            selectedListLength = cattleListLengthB
+        } else {
+            selectedListLength = cattleListLengthA
+        }
+    }
+   }
+console.log(cattleList)
+
+console.log("\nHere is the team of drovers you will be joining")
 for (const drover of drovers) {
     console.log(`\t* ${drover.first_name} ${drover.last_name}`)
 }
